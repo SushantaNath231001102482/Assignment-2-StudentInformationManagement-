@@ -1,0 +1,246 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inter", Arial, sans-serif;
+  background: #f1f5f9;
+  color: #1e293b;
+}
+
+.app {
+  min-height: 100vh;
+}
+
+/* Header */
+
+.header {
+  padding: 70px 20px;
+  text-align: center;
+  color: white;
+  background: linear-gradient(
+    135deg,
+    #0f172a,
+    #1e3a8a,
+    #2563eb
+  );
+}
+
+.header h1 {
+  font-size: 44px;
+  font-weight: 800;
+  margin-bottom: 10px;
+}
+
+.header p {
+  color: #dbeafe;
+  font-size: 17px;
+}
+
+/* Student Section */
+
+.student-section {
+  max-width: 1200px;
+  margin: auto;
+  padding: 70px 25px;
+}
+
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 35px;
+}
+
+.section-header h2 {
+  font-size: 32px;
+  color: #0f172a;
+}
+
+.section-header p {
+  margin-top: 5px;
+  color: #64748b;
+}
+
+/* Sort Button */
+
+.sort-button {
+  border: none;
+  padding: 13px 20px;
+  border-radius: 10px;
+  background: #2563eb;
+  color: white;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.sort-button:hover {
+  background: #1d4ed8;
+  transform: translateY(-2px);
+}
+
+/* Student Grid */
+
+.student-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+}
+
+/* Student Card */
+
+.student-card {
+  background: white;
+  border: 1px solid #e2e8f0;
+  border-radius: 18px;
+  padding: 25px;
+  box-shadow: 0 8px 25px rgba(15, 23, 42, 0.07);
+  transition: all 0.3s ease;
+}
+
+.student-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 35px rgba(15, 23, 42, 0.14);
+}
+
+/* Card Top */
+
+.card-top {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.student-photo {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid #dbeafe;
+}
+
+.card-top h3 {
+  font-size: 19px;
+  color: #0f172a;
+  margin-bottom: 7px;
+}
+
+.department {
+  display: inline-block;
+  padding: 5px 10px;
+  border-radius: 20px;
+  background: #dbeafe;
+  color: #1d4ed8;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+/* Student Details */
+
+.student-details {
+  padding-top: 20px;
+}
+
+.detail {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
+  border-bottom: 1px solid #f1f5f9;
+}
+
+.detail:last-child {
+  border-bottom: none;
+}
+
+.detail span {
+  color: #64748b;
+  font-size: 13px;
+}
+
+.detail strong {
+  color: #334155;
+  font-size: 13px;
+}
+
+.detail.cgpa strong {
+  color: #2563eb;
+  font-size: 17px;
+}
+
+/* Footer */
+
+.footer {
+  padding: 30px 20px;
+  text-align: center;
+  background: #0f172a;
+  color: #cbd5e1;
+}
+
+.footer p {
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+
+.footer span {
+  font-size: 12px;
+  color: #64748b;
+}
+
+/* Responsive */
+
+@media (max-width: 1000px) {
+  .student-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 700px) {
+  .header {
+    padding: 55px 20px;
+  }
+
+  .header h1 {
+    font-size: 34px;
+  }
+
+  .student-section {
+    padding: 50px 18px;
+  }
+
+  .section-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+  }
+
+  .student-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 400px) {
+  .header h1 {
+    font-size: 28px;
+  }
+
+  .student-card {
+    padding: 20px;
+  }
+
+  .student-photo {
+    width: 65px;
+    height: 65px;
+  }
+
+  .card-top h3 {
+    font-size: 16px;
+  }
+}
